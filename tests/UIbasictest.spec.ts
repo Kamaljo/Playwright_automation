@@ -116,6 +116,8 @@ test ( 'test to validate the error message in login page',async ({browser}) =>
              const redText = await newpage.locator('.red').first().textContent();
              console.log(redText);
 
+             page.pause();
+
 
                
     
