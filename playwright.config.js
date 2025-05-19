@@ -36,7 +36,7 @@ const config = ({
     // trace: 'on-first-retry',
 
     browserName : 'chromium',
-    headless : false,
+    headless : true,
     screenshot : 'on',
     trace : 'on'
   },
