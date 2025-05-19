@@ -1,6 +1,6 @@
 import {expect, test } from '@playwright/test'
 
-test.only( 'test for login use', async ({page}) =>
+test( 'test for login use', async ({page}) =>
 
     {
 
@@ -28,11 +28,10 @@ test.only( 'test for login use', async ({page}) =>
    await loginbutton.click();
    await product.first().waitFor();
    await page.locator("button[routerlink*='myorders']").click();
-   await page.route("https://rahulshettyacademy.com/api/ecom/order/get-orders-details?id=68270d715d3fd9ffa0f18ac1",
+   await page.route("https://rahulshettyacademy.com/api/ecom/order/get-orders-details?id=*",
       route => route.continue({url : "https://rahulshettyacademy.com/api/ecom/order/get-orders-details?id=68270d715d3fd9ffa0f18ac2" })
 
    )
-await page.pause();
    await page.locator("button:has-text('view')").first().click();
    await expect(page.locator("//p[@class='blink_me']")).toHaveText("You are not authorize to view this order");
    

@@ -27,7 +27,7 @@ test.beforeAll( async ({browser})=>
 
 )
 
-test.only( 'test for login use', async () =>
+test( 'test for login use', async () =>
 
     {
 

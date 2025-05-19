@@ -130,33 +130,3 @@ test ( 'test to validate the error message in login page',async ({browser}) =>
                 
                 
                 })
-
-                test ('test', async ({ page }) => {
-                    await page.goto('https://frontline.test.simpplr.xyz/login');
-                    await page.getByRole('textbox', { name: 'Email' }).click();
-                    await page.getByRole('textbox', { name: 'Email' }).fill('anagh.desai@simpplr.com');
-                    await page.getByRole('button', { name: 'Continue' }).click();
-                    await page.getByRole('textbox', { name: 'Password' }).click();
-                    await page.getByRole('textbox', { name: 'Password' }).fill('Simp@123');
-                    await page.getByRole('button', { name: 'Sign in' }).click();
-                    await page.getByRole('button', { name: 'Profile settings' }).click();
-
-// Hover over the "Manage" menu to reveal the submenu
-// Hover to trigger submenu
-// Hover the parent menu to reveal the submenu
-// Hover the parent menu to reveal the submenu
-await page.getByRole('menuitem', { name: 'Manage' }).hover();
-
-// Locate the submenu item
- await page.locator('.DropdownMenu-module__DropdownMenuItemLabel__2Wx1u').nth(18).click();
-
-                    
-                    
-                    // Then click on "Manage"
-                    
-                    
-                   
-                    await page.getByRole('heading', { name: 'QR codes added' }).click();
-                    await page.getByText('Add QR').click();
-                    await page.getByRole('menuitem', { name: 'Content' }).click();
-                  });
